@@ -12,7 +12,7 @@ app.all('/login',function(req,res){
 	console.log(token)
 	var decrypt=jwt.verify(token,'shhhhh');
 	console.log(decrypt)
-	res.send(token);
+	res.send({token,decrypt});
 })
 
 app.listen(3000, function(){
